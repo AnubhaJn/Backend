@@ -33,3 +33,4 @@ module.exports = async function sendMail(userObj){
 
      console.log("Message sent : %s",info.messageId);
 };
+
