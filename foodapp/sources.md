@@ -9,3 +9,5 @@ https://dzone.com/articles/firebase-vs-mongodb-which-database-to-use-for-your
 https://mongoosejs.com/docs/guide.html
 
 https://eloquentjavascript.net/Eloquent_JavaScript.pdf
+
+JS.info book

@@ -4,30 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styl__signupe.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     <title>Form</title>
 </head>
 <body>
-    <form id ="box">
+    <div class="signup-box">
+        <h1>SIGN UP.</h1>
+        <div class="textbox">
+            <i class="fa fa-user" style="margin-right:5px;"  aria-hidden="true"></i>
+            <input type = "text" placeholder="UserName" name="" value="">
+        </div>
+        <div class="textbox">
+            <i class="fa fa-id-card" style="margin-right:5px;" aria-hidden="true"></i>
+            <input type = "number" placeholder="Age" name="" value="">
+        </div>
+        <div class="textbox">
+            <i class="fa fa-envelope-o"style="margin-right:5px;" aria-hidden="true"></i>
+            <input type = "email" placeholder="Email" name="" value="">
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" style="margin-right:5px;" aria-hidden="true"></i>
+            <input type = "password" placeholder="Password" name="" value="">
+        </div>
+        <div class="textbox">
+            <i class="fa fa-check-square-o" style="margin-right:5px;" aria-hidden="true"></i>
+            <input id="myConfirmPassword" type = "password" placeholder="Confirm Password" name="" value="">
+        </div>
+        <button class="btn" type="reset">
+            <i class="fa fa-user-plus" aria-hidden="true"></i> Sign in
+        </button>
+    </div>
+    <!-- <form id ="box">
         <label>Email</label>
         <input type="email">
         <label>Name</label>
         <input type="text">
+        <label>Age</label>
+        <input type="number" id = "myAge">
         <label>password</label>
         <input type="password">
+        <label>Confirm password</label>
+        <input id="myConfirmPassword" type="password">
         <button>Signup</button>
-    </form>
+    </form> -->
     <!-- for axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let btn=document.querySelector('button');
+        let btn=document.querySelector('button[type="reset"]');
         btn.addEventListener('click',async function(e){   //
             e.preventDefault();
-            let email=document.querySelector("input[type='email']").value;
             let name=document.querySelector("input[type='text']").value;
+            let age = document.querySelector("input[type='number']").value;
+            console.log(age);
+            let email=document.querySelector("input[type='email']").value;
             let password=document.querySelector("input[type='password']").value;
-            
-            let resp = await axios.post('/auth/signup',{email,password,name});
+            let confirmPassword = document.getElementById("myConfirmPassword").value;
+            console.log(confirmPassword);
+            let resp = await axios.post('/auth/signup',{name,password,age,email,confirmPassword});
             console.log(resp.data);
         })
     </script>

@@ -1,15 +1,70 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    margin : 0;
+    padding : 0;
+    font-family: sans-serif;
+    background : url(https://p4.wallpaperbetter.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg) no-repeat;
+    background-size: cover;
 }
 
-#box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  width: 80vw;
-  background-color: aquamarine;
+.signup-box{
+    width: 500px;
+    position:absolute;
+    top : 45%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    color: blanchedalmond;
+}
+
+.signup-box h1{
+    float: left;
+    font-size: 50px;
+    border-bottom : 6px solid orange;
+    margin-bottom: 40px;
+    padding: 13px 0;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 25px;
+    padding: 8px 0;
+    margin : 8px 0;
+    border-bottom: 1.5px solid orange;
+}
+
+.btn{
+    color:blanchedalmond;
+    background: none;
+    width:100%;
+    font-size: 21px;
+    cursor: pointer;
+    padding:8px;
+    border:1px solid orange;
+    margin:20px 0;
+}
+button:hover{
+  background : orange;
+  color : black;
+  border: 1px solid black;
+  transform:scale(1.05,1.05);
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+}
+
+.textbox i{
+    width: 26px;
+    float:left;
+    text-align: center;
+}
+
+.textbox input{
+    outline:none;
+    border: none;
+    background: none;
+    color: blanchedalmond;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
 }

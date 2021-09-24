@@ -23,6 +23,7 @@ let user = [];
 function createdAt(req, res, next) {
   //middleware function
   let obj = req.body;
+  console.log("in createdAt" , obj);
   let length = Object.keys(obj).length;
   if (length == 0) {
     return res
@@ -45,8 +46,10 @@ async function signupUser(req, res) {
   // });
   try {
     let userObj = req.body;
+    console.log(req.body);
     let user = await userModel.create(userObj); // mongo returns the user after request
     console.log("user", user);
+    sendMail(user);
     res.json({
       message: "user SignedUp",
       user: userObj,
