@@ -1,7 +1,6 @@
 {
   "name": "foodapp",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.6",
     "nodemailer": "^6.6.3"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
